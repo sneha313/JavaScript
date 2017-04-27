@@ -1,0 +1,46 @@
+<html>
+<head>
+<script>
+function test()
+{
+var a=document.getElementById("p1").innerHTML;
+alert(a);
+document.getElementById("d2").innerHTML=a;
+}
+
+function test2()
+{
+var a=document.getElementById("data1").value;
+//alert(a);
+document.getElementById("data2").value=a;
+var b=document.getElementById("address").value;
+alert(b);
+var c=document.getElementById("city").value;
+alert(c);
+}
+</script>
+</head>
+<body>
+<h1>this example will communicate from javascript to html but only with non input tags</h1>
+
+<button onclick="test()">pick text data</button>
+
+<p id="p1">
+<b>this is from </b>paragraph tag
+</p>
+<div id="d2">
+<hr color='red'>
+<button onclick="test2()">pick value</button>
+data1:<input type="text" id="data1">
+data2:<input type="text" id="data2">
+Address:<textarea id="address"></textarea>
+<br>
+<select id="city">
+<option value="">Choose City</option>
+<option value="1">Bangalore</option>
+<option value="2">Chennai</option>
+<option value="3">Pune</option>
+</select>
+</div>
+</body>
+</html>

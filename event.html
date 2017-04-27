@@ -1,0 +1,41 @@
+<html>
+<head>
+<script>
+function test()
+{
+alert("it is working well");
+}
+
+function test2(data)
+{
+alert("you have enter: "+data);
+}
+</script>
+</head>
+<body onload="test2('this is on load when page was loading')">
+<h1>The way of merging HTML to JAVASCRIPT</h1>
+<button onclick="test()">1 click</button>
+<button ondblclick="test()">2 click</button>
+<button onmousemove="test()">move your mouse</button>
+<button onmouseout="test()">please move out</button>
+On change : <select onchange="test()">
+<option value="">Choose City</option>
+<option value="1">Bangalore</option>
+<option value="2">Delhi</option>
+<option value="3">Chennai</option>
+</select>
+
+<button onmousedown="test()">mouse down (left/right click mouse)</button>
+
+<h1>keyboard events</h1>
+OnKeyPress:<input type="text" value="Hello"onkeypress="test2(this.value)">
+<hr>
+onkeydown:<input type="text" value="this is key down" onkeydown="test2(this.value)">
+<hr>
+onkeyup:<input type="text" value="onkeyup" onkeyup="test2(this.value)">
+<hr>
+on focus:<input type="text" value="this is key down" onfocus="test2(this.value)">
+<hr>
+on blur:<input type="text" value="on blur" onblur="test2(this.value)">
+</body>
+</html>
